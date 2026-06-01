@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTB Mobile Lab - Private Mobile Blood Draws & Phlebotomy</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: {
+                            50: '#FFF5F5',
+                            100: '#FFE3E3',
+                            500: '#E03131',
+                            600: '#C92A2A',
+                            700: '#B01E1E',
+                        },
+                        brandBlue: {
+                            50: '#F0F4F8',
+                            500: '#1C7ED6',
+                            600: '#1971C2',
+                            700: '#1565C0',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER -->
+    <header class="bg-white border-b border-slate-100 py-5 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
+            <!-- Brand Logo (Recreated Vector SVG from Car Magnet) -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12">
+                    <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow">
+                        <g id="droplet">
+                            <!-- Left Section: Blue waves -->
+                            <path d="M50,10 C50,10 15,48 15,70 C15,88 30,100 50,100 C50,100 50,10 50,10 Z" fill="#1C7ED6" />
+                            <path d="M18,65 Q25,60 32,65 T46,65" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M16,75 Q24,70 32,75 T48,75" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+                            <path d="M20,85 Q27,80 34,85 T45,85" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+
+                            <!-- Right Section: Red Blood Drop with gloss highlight -->
+                            <path d="M50,10 C50,10 85,48 85,70 C85,88 70,100 50,100 C50,100 50,10 50,10 Z" fill="#C92A2A" />
+                            <path d="M68,52 C74,58 76,68 74,74 C71,78 66,80 63,77 C60,74 61,64 65,56 C66,54 67,51 68,52 Z" fill="#FFFFFF" opacity="0.65" />
+
+                            <!-- Center Split Column: Bridge Theme -->
+                            <rect x="47" y="10" width="6" height="90" fill="#212529" />
+                            <line x1="47" y1="35" x2="35" y2="55" stroke="#FFFFFF" stroke-width="1.5" />
+                            <line x1="47" y1="55" x2="35" y2="75" stroke="#FFFFFF" stroke-width="1.5" />
+                            <line x1="53" y1="35" x2="65" y2="55" stroke="#FFFFFF" stroke-width="1.5" />
+                            <line x1="53" y1="55" x2="65" y2="75" stroke="#FFFFFF" stroke-width="1.5" />
+                            
+                            <rect x="35" y="60" width="30" height="4" fill="#212529" rx="1" />
+                            <line x1="35" y1="62" x2="65" y2="62" stroke="#E03131" stroke-width="1.5" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black tracking-tight text-slate-900 leading-none">OTB</span>
+                    <span class="text-[10px] font-bold tracking-widest text-brandBlue-600 uppercase leading-none mt-1">MOBILE LAB</span>
+                </div>
+            </div>
+            
+            <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-3 py-1.5 rounded-full border border-emerald-200 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
+                Active Service
+            </span>
+        </div>
+    </header>
+
+    <!-- MAIN CONTACT CARD CONTAINER -->
+    <main class="max-w-md mx-auto px-4 py-12 flex-grow flex flex-col justify-center">
+        
+        <!-- Welcome / Magnet Heading -->
+        <div class="text-center space-y-3 mb-8">
+            <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">We come to you!</h1>
+            <p class="text-base text-slate-600 font-medium">Private in-home or office blood draws.</p>
+        </div>
+
+        <!-- Premium Contact Card -->
+        <div class="bg-white rounded-3xl border border-slate-200/60 shadow-xl overflow-hidden relative">
+            
+            <!-- Red & Blue Accent Strip -->
+            <div class="h-2 bg-gradient-to-r from-brandRed-600 to-brandBlue-600"></div>
+            
+            <div class="p-8 space-y-6">
+                
+                <!-- Logo & Business Name inside Card -->
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Mobile Phlebotomy Services</span>
+                    <h2 class="text-2xl font-black text-slate-950 tracking-tight">OTB Mobile Lab</h2>
+                    <p class="text-xs text-brandBlue-600 font-bold bg-brandBlue-50 inline-block px-3 py-1 rounded-full">Affordable lab testing, no orders needed</p>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-slate-100 my-4"></div>
+
+                <!-- Main Call/Text Actions -->
+                <div class="space-y-3.5">
+                    <span class="block text-center text-xs font-bold uppercase tracking-wider text-slate-400">Call or Text</span>
+                    
+                    <div class="text-center">
+                        <a href="tel:3215502401" class="text-3xl font-black text-slate-900 tracking-tight hover:text-brandRed-600 transition-colors">
+                            321-550-2401
+                        </a>
+                    </div>
+
+                    <!-- Direct Quick-Action Mobile Buttons -->
+                    <div class="grid grid-cols-2 gap-3 pt-2">
+                        <a href="tel:3215502401" class="flex items-center justify-center gap-2 bg-brandRed-600 hover:bg-brandRed-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all text-sm text-center shadow-md shadow-brandRed-100">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.3 11.3 0 005.455 5.454l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                            Call
+                        </a>
+                        <a href="sms:3215502401?body=Hi%20OTB%20Mobile%20Lab%2C%20I'd%20like%20to%20get%20more%20information%20about%20a%20blood%20draw." class="flex items-center justify-center gap-2 bg-brandBlue-600 hover:bg-brandBlue-700 text-white font-bold py-3.5 px-4 rounded-xl transition-all text-sm text-center shadow-md shadow-brandBlue-100">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                            Text SMS
+                        </a>
+                    </div>
+
+                    <!-- One-Click Number Copy Tool -->
+                    <button onclick="copyToClipboard('321-550-2401', this)" class="w-full flex items-center justify-center gap-1.5 text-xs text-slate-500 hover:text-slate-800 transition-colors py-2 rounded-lg bg-slate-50 hover:bg-slate-100 font-semibold mt-2 border border-slate-100">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" /></svg>
+                        Copy Phone Number
+                    </button>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-slate-100 my-4"></div>
+
+                <!-- Web Address -->
+                <div class="text-center space-y-1">
+                    <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Website Address</span>
+                    <a href="http://www.otbmobilelab.com" target="_blank" rel="noopener" class="text-lg font-bold text-slate-800 hover:text-brandBlue-600 transition-all underline decoration-brandBlue-500 underline-offset-4">
+                        www.otbmobilelab.com
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mini Features List -->
+        <div class="mt-8 space-y-3 px-2">
+            <div class="flex items-center gap-2.5 text-sm text-slate-600 font-medium">
+                <span class="text-brandBlue-500 font-bold">✓</span>
+                <span>Medicare & Private Insurance compatible</span>
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-600 font-medium">
+                <span class="text-brandBlue-500 font-bold">✓</span>
+                <span>Home visits, office visits, & health screenings</span>
+            </div>
+            <div class="flex items-center gap-2.5 text-sm text-slate-600 font-medium">
+                <span class="text-brandBlue-500 font-bold">✓</span>
+                <span>Routine blood work, kit processing, & more</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- CLIPBOARD FLOATING TOAST -->
+    <div id="copyToast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs font-bold px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 translate-y-20 opacity-0 transition-all duration-300 z-50 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+        <span>Number copied to clipboard!</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-10 mt-12 text-center border-t border-slate-800">
+        <div class="max-w-md mx-auto px-4 space-y-4">
+            <p class="text-sm">
+                Certified Phlebotomy Practitioner &bull; HIPAA Secure Handling &bull; Reliable & Safe Collection
+            </p>
+            <p class="text-xs text-slate-500">
+                &copy; 2026 OTB Mobile Lab. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- CLIPBOARD LOGIC -->
+    <script>
+        function copyToClipboard(text, element) {
+            // Native fallback for browser iframe execution compatibility
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            // Pop toast alert
+            const toast = document.getElementById('copyToast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
